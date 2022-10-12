@@ -11,7 +11,7 @@ export default function Document() {
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet" />
             </Head>
-            <body className="bg-white text-dark">
+            <body className="text-dark" style={{backgroundColor:"#F4F8FF"}}>
                 <Main />
                 <NextScript />
             </body>
