@@ -11,14 +11,14 @@ function MyApp({ Component, pageProps }) {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
   return(
-    <>
-    <div className="mx-auto" style={{ width: "375px" }}>
+    <div className="border border-warning">
+    <div className="mx-auto " style={{ width: "375px" }}>
     <Layout>
     <Component {...pageProps} />
     </Layout>
     </div>
     
-    </>
+    </div>
   );
 }
 
