@@ -19,7 +19,7 @@ const Packages = () => {
         }
     ];
     return (
-        <div className="p-4" style={{fontFamily: "poppins"}}>
+        <div style={{fontFamily: "poppins"}}>
             <div className="d-flex">
                 <Link href="/" className="nav-item active">
                     <a className="nav-link">

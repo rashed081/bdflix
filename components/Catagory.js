@@ -1,13 +1,16 @@
 import chart from "../Images/Chart.png"
 import Image from "next/image";
+import Link from "next/link";
 
 const Catagory = ({ title, bg1, bg2 }) => {
     const categoryStyle = {
-        width: "167px",
+        width: "157px",
         height: "63px",
         background: `linear-gradient(135deg, ${bg1}, ${bg2})`,
         position: "relative",
         borderRadius:"10px",
+        marginRight:"5px",
+        cursor:"pointer"
     };
     const textStyle = {
         fontFamily: 'Noto Sans Bengali',
@@ -18,8 +21,8 @@ const Catagory = ({ title, bg1, bg2 }) => {
         top: "22px"
     }
     return (
-        <div>
-            <div style={categoryStyle}>
+        <Link href="/individualCategory" className="my-3 p-2">
+            <div className="mx-auto" style={categoryStyle}>
                 <h6 className="text-white"
                     style={textStyle}>{title}</h6>
                 <div style={{ position: "absolute", right: "0px", bottom: "-5px" }}>
@@ -27,7 +30,7 @@ const Catagory = ({ title, bg1, bg2 }) => {
                 </div>
             </div>
 
-        </div>
+        </Link>
     );
 
 }
