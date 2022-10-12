@@ -23,10 +23,10 @@ const Package = ({ name, validity, price }) => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}>
                 <div>
-                    <h5 className="text-dark">{name}</h5>
-                    <h5 className="text-secondary">{validity}</h5>
+                    <h5 style={{ fontSize:"13px"}}>{name}</h5>
+                    <h5 className="text-secondary" style={{ fontSize:"13px"}}>{validity}</h5>
                 </div>
-                <h5 className="text-dark" >{price}</h5>
+                <h5 style={{ fontSize:"20px"}} >{price}</h5>
             </div>
 
         </Link>

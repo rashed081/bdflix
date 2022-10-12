@@ -1,21 +1,33 @@
-import Link from "next/link";
+import chart from "../Images/Chart.png"
+import Image from "next/image";
 
-const Catagory = () => {
+const Catagory = ({ title, bg1, bg2 }) => {
+    const categoryStyle = {
+        width: "167px",
+        height: "63px",
+        background: `linear-gradient(135deg, ${bg1}, ${bg2})`,
+        position: "relative",
+        borderRadius:"10px",
+    };
+    const textStyle = {
+        fontFamily: 'Noto Sans Bengali',
+        fontWeight: "bold",
+        fontSize: "20",
+        position: "absolute",
+        left: "17px",
+        top: "22px"
+    }
     return (
-        <>
-            <div className="d-flex justify-content-between">
-                <h3>Explore Catagory</h3>
-                <h6>
-                    <Link href="/catagory">
-                        <a>View All</a>
-                    </Link>
-                </h6>
+        <div>
+            <div style={categoryStyle}>
+                <h6 className="text-white"
+                    style={textStyle}>{title}</h6>
+                <div style={{ position: "absolute", right: "0px", bottom: "-5px" }}>
+                    <Image src={chart} />
+                </div>
             </div>
-            <div>
-                
 
-            </div>
-        </>
+        </div>
     );
 
 }

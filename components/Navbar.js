@@ -9,8 +9,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
     return (
-        <nav className="navbar fixed-bottom navbar-expand shadow-lg" style={{ height: "80px", backgroundColor: "#DCEAFB", }}>
-            <div className="   mx-auto" style={{ width: "375px" }}>
+        <nav className="navbar fixed-bottom  navbar-expand shadow-lg"
+            style={{ height: "80px", backgroundColor: "#DCEAFB", }}>
+            <div className="mx-auto" style={{ width: "375px" }}>
                 <ul className="navbar-nav d-flex justify-content-around">
                     <Link href="/" className="nav-item active"><a className="nav-link">
                         <FontAwesomeIcon
