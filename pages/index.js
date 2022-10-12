@@ -4,7 +4,7 @@ import Trending from "../components/Trending";
 
 export default function Home() {
   return (
-    <div className="m-4">
+    <div className="m-2">
       <SearchBar />
       <Trending/>
       <Catagories />
