@@ -3,8 +3,19 @@ import Carousel from 'react-bootstrap/Carousel';
 import img1 from '../Images/image5.jpg';
 import img2 from '../Images/image6.jpg';
 import img3 from '../Images/image2.jpg';
+import useScreenWidth from "../hooks/useScreenWidth";
 
 const Trending = () => {
+    const widthSize = useScreenWidth()
+    let control;
+    const mobileWidth = 400
+
+    if (widthSize > mobileWidth) {
+        control = true;
+    }
+    if (widthSize <= mobileWidth) {
+        control =false;
+    }
     const imgStyle = {
         borderRadius: "11px",
         width: "256px",
@@ -12,7 +23,7 @@ const Trending = () => {
     }
     return (
         <div className="my-3">
-            <Carousel indicators={false} controls={false}>
+            <Carousel indicators={false} controls={control}>
                 <Carousel.Item>
                     <Image src={img1} style={imgStyle} />
                 </Carousel.Item>

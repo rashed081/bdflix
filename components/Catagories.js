@@ -1,8 +1,20 @@
 import Link from "next/link";
 import Catagory from "./Catagory";
 import Carousel from 'react-bootstrap/Carousel';
+import useScreenWidth from "../hooks/useScreenWidth";
+
 
 const Catagories = () => {
+    const widthSize = useScreenWidth()
+    let control;
+    const mobileWidth = 400
+
+    if (widthSize > mobileWidth) {
+        control = true;
+    }
+    if (widthSize <= mobileWidth) {
+        control =false;
+    }
     const categories = [
         {
             "id": "1",
@@ -42,7 +54,7 @@ const Catagories = () => {
             </div>
 
             <div>
-                <Carousel indicators={false} controls={false} >
+                <Carousel indicators={false} controls={control} >
                     <Carousel.Item >
                         <div className="d-flex ">
                             <Catagory

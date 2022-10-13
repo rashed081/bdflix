@@ -6,7 +6,18 @@ import img2 from "../Images/image1.jpg"
 import img3 from "../Images/image4.jpg"
 import img4 from "../Images/image3.jpg"
 import Card from './Card';
+import useScreenWidth from "../hooks/useScreenWidth";
 const NewReleased = () => {
+    const widthSize = useScreenWidth()
+    let control;
+    const mobileWidth = 400
+
+    if (widthSize > mobileWidth) {
+        control = true;
+    }
+    if (widthSize <= mobileWidth) {
+        control =false;
+    }
     return (
         <div className="my-3">
             <div className="d-flex justify-content-between" style={{ fontFamily: "poppins" }}>
@@ -17,7 +28,7 @@ const NewReleased = () => {
                     </Link>
                 </h6>
             </div>
-            <Carousel indicators={false} controls={false}>
+            <Carousel indicators={false} controls={control}>
                 <Carousel.Item>
                     <Card image={img1}></Card>
                 </Carousel.Item>
