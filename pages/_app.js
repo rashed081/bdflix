@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <>
-      <div className="mx-auto my-3 px-2" style={{ width: "375px", paddingBottom:"90px" }}>
+      <div className="mx-auto my-3 px-2" style={{ width: "375px", paddingBottom:"60px" }}>
         <Layout>
           <Component {...pageProps} />
         </Layout>
