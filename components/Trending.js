@@ -8,7 +8,7 @@ import useScreenWidth from "../hooks/useScreenWidth";
 const Trending = () => {
     const widthSize = useScreenWidth()
     let control;
-    const mobileWidth = 400
+    const mobileWidth = 768;
 
     if (widthSize > mobileWidth) {
         control = true;

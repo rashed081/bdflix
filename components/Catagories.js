@@ -7,7 +7,7 @@ import useScreenWidth from "../hooks/useScreenWidth";
 const Catagories = () => {
     const widthSize = useScreenWidth()
     let control;
-    const mobileWidth = 400
+    const mobileWidth = 768;
 
     if (widthSize > mobileWidth) {
         control = true;
